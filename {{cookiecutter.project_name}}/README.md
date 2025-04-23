@@ -1,4 +1,4 @@
-# AI Labs Base Repository Template
+# {{cookiecutter.project_name}}
 
 This repository serves as a development template for our projects, providing a standardized environment using Docker and uv for dependency management. It offers a basic structure, configuration for linters, and best practices for developing AI applications in Python.
 
