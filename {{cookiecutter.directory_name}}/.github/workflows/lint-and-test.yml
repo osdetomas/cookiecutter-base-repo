@@ -1,0 +1,46 @@
+name: Lint and Test
+
+on:
+  pull_request:
+    branches:
+      - dev
+
+jobs:
+  lint_and_test:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install UV
+        run: |
+          python -m pip install --upgrade pip
+          pip install uv
+
+      - name: Create and activate virtual environment with UV
+        run: |
+          uv venv
+          source .venv/bin/activate
+          uv sync
+
+      - name: Run Ruff Linter
+        run: |
+          uvx ruff check
+
+      - name: Run Ruff Formatter
+        run: |
+          uvx ruff format --check
+
+      - name: Run mypy
+        run: |
+          uv run mypy --pretty
+
+      - name: Run Unit Tests
+        run: |
+          uv run pytest -m unit

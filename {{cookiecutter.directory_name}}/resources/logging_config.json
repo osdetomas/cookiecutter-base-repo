@@ -1,0 +1,62 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+      "colored": {
+        "()": "app.logging_config.ColoredFormatter",
+        "fmt": "%(asctime)s: %(colored_levelname)s %(module)s:L%(lineno)d %(message)s",
+        "datefmt": "%Y-%m-%dT%H:%M:%S%z"
+      },
+      "json": {
+        "()": "app.logging_config.MyJSONFormatter",
+        "fmt_keys": {
+          "level": "levelname",
+          "message": "message",
+          "timestamp": "timestamp",
+          "logger": "name",
+          "module": "module",
+          "function": "funcName",
+          "line": "lineno",
+          "thread_name": "threadName"
+        }
+      }
+    },
+    "filters": {
+      "internal": {
+        "()": "app.logging_config.WhiteListFilter",
+        "loggers": ["app"]
+      }
+    },
+    "handlers": {
+      "stderr": {
+        "class": "logging.StreamHandler",
+        "level": "DEBUG",
+        "filters": ["internal"],
+        "formatter": "colored",
+        "stream": "ext://sys.stderr"
+      },
+      "file_json": {
+        "class": "logging.handlers.RotatingFileHandler",
+        "level": "DEBUG",
+        "formatter": "json",
+        "filename": "logs/app.log.jsonl",
+        "maxBytes": 5242880,
+        "backupCount": 3
+      },
+      "queue_handler": {
+        "class": "logging.handlers.QueueHandler",
+        "handlers": ["stderr", "file_json"],
+        "respect_handler_level": true
+      }
+    },
+    "loggers": {
+      "root": {
+        "level": "DEBUG",
+        "handlers": ["queue_handler"]
+      },
+      "openai": {
+        "level": "DEBUG",
+        "propagate": true
+      }
+    }
+  }
