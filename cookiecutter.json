@@ -1,8 +1,10 @@
 {
-    "full_name": "full_name",
-    "email": "email@holdingsinsud.com",
-    "github_username": "github.username",
-    "project_name": "python_project_name",
+    "project_name": "My AI Project",
+    "project_slug": "my-ai-project",
+    "project_package": "myaiproject",
     "description": "Project short description.",
+    "full_name": "Name Last Name",
+    "email": "email@holdingsinsud.com",
+    "github_username": "username",
     "version": "0.0.1"
   }

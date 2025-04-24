@@ -1,7 +1,7 @@
 [project]
-name = "app"
+name = {cookiecutter.project_name}
 version = "0.1.0"
-description = "Add your description here"
+description = {cookiecutter.project_descritption}
 readme = "README.md"
 authors = [
     { name="Antonio Rodríguez", email="antonio.rodriguez@holdingsinsud.com" },
