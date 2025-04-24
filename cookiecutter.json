@@ -1,7 +1,6 @@
 {
     "project_name": "My AI Project",
     "project_slug": "my-ai-project",
-    "project_package": "myaiproject",
     "description": "Project short description.",
     "full_name": "Name Last Name",
     "email": "email@holdingsinsud.com",

@@ -1,5 +1,5 @@
 [project]
-name = "{{cookiecutter.project_name}}"
+name = "app"
 version = "0.1.0"
 description = "{{cookiecutter.description}}"
 readme = "README.md"
@@ -10,8 +10,7 @@ requires-python = ">=3.12"
 
 dependencies = [
     "openai==1.64.0",
-    "python-dotenv==1.0.1",
-    "fastapi[standard]",
+    "python-dotenv==1.0.1"
 ]
 
 [build-system]
