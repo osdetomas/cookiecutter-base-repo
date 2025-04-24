@@ -1,17 +1,17 @@
 [project]
-name = {cookiecutter.project_name}
+name = "{{cookiecutter.project_name}}"
 version = "0.1.0"
-description = {cookiecutter.project_descritption}
+description = "{{cookiecutter.descritption}}"
 readme = "README.md"
 authors = [
-    { name="Antonio Rodríguez", email="antonio.rodriguez@holdingsinsud.com" },
-    { name="Paula Encinar", email="paula.encinar@holdingsinsud.com" }
+    { name="{{cookiecutter.full_name}}", email="{{cookiecutter.email}}" },
 ]
 requires-python = ">=3.12"
 
 dependencies = [
     "openai==1.64.0",
     "python-dotenv==1.0.1",
+    "fastapi[standard]",
 ]
 
 [build-system]
