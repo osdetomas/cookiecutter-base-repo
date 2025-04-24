@@ -39,7 +39,6 @@ cruft create https://github.com/INSUD-AI-Labs/cookiecutter-base-repo/
 
 cruft will then ask you any necessary questions to create your new project (Behind the scenes, cruft uses Cookiecutter)
 
-2. 
 2. Create a virtual environment and install dependencies:
 
 To create the virtual environment, you must first install the package manager: [uv](https://docs.astral.sh/uv/getting-started/installation/)
