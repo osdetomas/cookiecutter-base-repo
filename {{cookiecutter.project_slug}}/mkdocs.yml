@@ -7,6 +7,8 @@ site_description: >-
 # Navigation menu
 nav:
   - Home: index.md
+  - Configuration: configuration.md
+  - Deployment: deployment.md
 
 # Theme
 theme:
