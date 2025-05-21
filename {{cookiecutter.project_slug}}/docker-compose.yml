@@ -12,3 +12,10 @@ services:
     ports:
       - "8000:8000"
     restart: always
+  mkdocs:
+    container_name: mkdocs
+    image: squidfunk/mkdocs-material
+    volumes:
+      - .:/docs
+    ports:
+      - "8080:8000"
