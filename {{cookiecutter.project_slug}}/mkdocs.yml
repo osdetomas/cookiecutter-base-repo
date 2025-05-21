@@ -36,6 +36,12 @@ plugins:
   - search
   - minify:
       minify_html: true
+  #- mkdocstrings:
+  #    default_handler: python
+  #    handlers:
+  #      python:
+  #        options:
+  #          allow_inspection: false
 
 # Extra
 extra:
