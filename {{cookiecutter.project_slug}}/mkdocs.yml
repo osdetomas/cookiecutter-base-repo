@@ -12,9 +12,10 @@ nav:
 theme:
     feaures:
       - tabs
+      - navigation.footer
     name: material
     icon:
-      logo: material/cloud
+      logo: fontawesome/solid/rocket
     font:
       text: Ubuntu
       code: Ubuntu Mono
@@ -39,8 +40,5 @@ extra:
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/INSUD-AI-Labs/
-
-docs_dir: docs/
-dev_addr: 0.0.0.0:8080
 
 copyright: Copyright &copy; 2025 Insud Pharma AI Labs
