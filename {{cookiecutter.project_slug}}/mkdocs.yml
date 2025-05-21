@@ -1,0 +1,46 @@
+# Site name
+site_name: {{cookiecutter.project_name}}
+site_author: {{cookiecutter.full_name}}
+site_description: >-
+  {{cookiecutter.description}}
+
+# Navigation menu
+nav:
+  - Home: index.md
+
+# Theme
+theme:
+    feaures:
+      - tabs
+    name: material
+    icon:
+      logo: material/cloud
+    font:
+      text: Ubuntu
+      code: Ubuntu Mono
+    static_templates:
+      - 404.html
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/INSUD-AI-Labs/
+
+docs_dir: docs/
+dev_addr: 0.0.0.0:8080
+
+copyright: Copyright &copy; 2025 Insud Pharma AI Labs

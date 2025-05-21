@@ -24,7 +24,9 @@ main = "app.main:main"
 dev-dependencies = [
   "pre-commit==3.8.0",
   "pytest==8.3.2",
-  "mypy==1.13.0"
+  "mypy==1.13.0",
+  "mkdocs==1.6.1",
+  "mkdocs-material==9.6.14",
 ]
 
 [tool.ruff]
