@@ -4,7 +4,14 @@
 
 ## Getting Started
 
-...
+### Prerequisites
+
+Before you start, ensure you have the following installed on your system:
+
+```bash
+which python
+which uv
+```
 
 Ensure you have the following software installed on your machine:
 - [Docker](https://docs.docker.com/get-docker/)

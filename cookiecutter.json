@@ -4,6 +4,6 @@
     "description": "Project short description.",
     "full_name": "Name Last Name",
     "email": "email@holdingsinsud.com",
-    "github_username": "username",
-    "version": "0.0.1"
+    "github_username": "github_username",
+    "version": "0.1.0"
   }
