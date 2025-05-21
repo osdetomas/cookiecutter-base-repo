@@ -39,48 +39,13 @@ cruft create https://github.com/INSUD-AI-Labs/cookiecutter-base-repo/
 
 cruft will then ask you any necessary questions to create your new project (Behind the scenes, cruft uses Cookiecutter)
 
-2. Create a virtual environment and install dependencies:
-
-To create the virtual environment, you must first install the package manager: [uv](https://docs.astral.sh/uv/getting-started/installation/)
+2. Go to repo and develop
 
 ```bash
-uv venv
-source .venv/bin/activate
-uv sync
+cd project_slug-repo && code .
 ```
 
-### Format and Lint your code
-
-Inside your venv install pre commit packages with the following command:
-
-```bash
- uv run pre-commit install
-```
-
- Now you can execute the linter and format tool with the following command:
-```bash
-uv run pre-commit run --all-files
-```
-
-In case you just want run the linter part you can execute this command to see the errors:
-
-```bash
-uv run ruff check .
-```
-
-Some linters issues can be fixed automaticaly with the following command:
-
-```bash
-uv run ruff check . --fix
-```
-
-In case you want to check the format part you can execute the following command (In that case you have to fix manually one by one all the issues):
-
-```bash
-uv run ruff format .
-```
-
-3. Updating template
+## Updating template
 
 To update an existing project, that was created using cruft, run cruft update in the root of the project.
 If there are any updates, cruft will have you review them before applying. If you accept the changes cruft will apply them to your project and update the .cruft.json file for you. 
