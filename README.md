@@ -1,6 +1,8 @@
-#  cookiecutter-base-repo template
+#  base-repo template
 
 This repository serves as a development template for our projects, providing a standardized environment using Docker and uv for dependency management. It offers a basic structure, configuration for linters, and best practices for developing AI applications in Python.
+
+Behind the scenes, this template works with [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html) powered by [Cruft](https://cruft.github.io/cruft/) to manage updates in the template even long after you've created your repository based on this template.
 
 ## Getting Started
 
