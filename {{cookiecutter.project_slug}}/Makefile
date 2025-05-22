@@ -16,7 +16,7 @@ uv:  ## Install uv if it's not present.
 	@command -v uv >/dev/null 2>&1 || curl -LsSf https://astral.sh/uv/install.sh | sh
 
 .PHONY: dev
-dev: uv ## Install dev dependencies into a .venv environment
+dev: uv ## Install dev dependencies
 	uv sync --dev
 
 .PHONY: locka
