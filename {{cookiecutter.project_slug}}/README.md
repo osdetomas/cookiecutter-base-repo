@@ -69,3 +69,17 @@ In case you want to check the format part you can execute the following command 
 ```bash
 uv run ruff format .
 ```
+
+### How to write documentation
+
+We like to generate good documentation and we work with [Mkdocs](https://www.mkdocs.org/) (with [mkdocstrings](https://mkdocstrings.github.io/python/) and [mkdocs-material](https://squidfunk.github.io/mkdocs-material/))
+
+> Make sure the .env file exists. You can rename the .env_template file to .env or create a new one.
+
+1. Run `make doc` to launch a Docker service with the documentation hosted in `/docs`. This basically launches the mkdocs server (`mkdocs serve`) in a container.
+
+> The first time it may take a while if it needs to download the mkdocs Docker image.
+
+2. Open the url http://localhost:8080/ in your browser.
+
+3. You can now build documentation on the fly. The server is automatically updated with every change to `/docs` or the `mkdocs.yml` file.

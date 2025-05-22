@@ -53,3 +53,5 @@ If there are any updates, cruft will have you review them before applying. If yo
 ```bash
 cruft update
 ```
+
+> If you need to go deeper into how the update works, you can visit the [official Cruft documentation](https://cruft.github.io/cruft/#updating-a-project) where it is clearly explained.
